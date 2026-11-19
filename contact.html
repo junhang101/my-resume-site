@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Get in touch with Jun Hang for professional connections, collaboration and enquiries.">
+
+    <title>Contact Me | Jun Hang</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">JH<span>.</span></a>
+
+    <nav>
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+
+        <a href="about.html">
+            <i class="fa-solid fa-user"></i> About
+        </a>
+
+        <a href="skills.html">
+            <i class="fa-solid fa-code"></i> Skills
+        </a>
+
+        <a href="experience.html">
+            <i class="fa-solid fa-briefcase"></i> Experience
+        </a>
+
+        <a href="projects.html">
+            <i class="fa-solid fa-folder-open"></i> Projects
+        </a>
+
+        <a href="research.html">
+            <i class="fa-solid fa-magnifying-glass-chart"></i> Research
+        </a>
+
+        <a href="certifications.html">
+            <i class="fa-solid fa-certificate"></i> Certificates
+        </a>
+
+        <a href="hobbies.html">
+            <i class="fa-solid fa-heart"></i> Hobbies
+        </a>
+
+        <a href="contact.html" class="active">
+            <i class="fa-solid fa-envelope"></i> Contact
+        </a>
+    </nav>
+</header>
+
+
+<!-- Contact Hero -->
+<section class="contact-hero">
+
+    <p class="welcome">LET'S CONNECT</p>
+
+    <h1>Get In <span>Touch</span></h1>
+
+    <p>
+        Feel free to contact me for professional opportunities,
+        collaboration, academic discussions or any enquiries.
+        I would be happy to hear from you.
+    </p>
+
+</section>
+
+
+<!-- Contact Information -->
+<section class="contact-section">
+
+    <h2>Contact <span>Information</span></h2>
+
+    <p class="contact-description">
+        You can reach me through the following platforms.
+    </p>
+
+
+    <div class="contact-container">
+
+        <!-- Email -->
+        <div class="contact-card">
+            <div class="contact-icon">✉</div>
+
+            <h3>Email</h3>
+
+            <p>
+                Feel free to send me an email for enquiries
+                or professional communication.
+            </p>
+
+            <p class="email-address" id="emailAddress">
+                junhangyap101@gmail.com
+            </p>
+
+            <div class="email-actions">
+
+                <a href="mailto:junhangyap101@gmail.com"
+                   class="contact-link">
+                    Send Email ↗
+                </a>
+
+                <button type="button"
+                        class="copy-email-button"
+                        onclick="copyEmail()">
+
+                    <i class="fa-solid fa-copy"></i>
+                    <span id="copyText">Copy Email</span>
+
+                </button>
+
+            </div>
+        </div>
+
+
+        <!-- GitHub -->
+        <div class="contact-card">
+            <div class="contact-icon">⌨</div>
+            <h3>GitHub</h3>
+            <p>
+                Explore my programming projects,
+                development work and source code.
+            </p>
+            <a href="https://github.com/junhang101"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-link">
+                Visit GitHub ↗
+            </a>
+        </div>
+
+
+        <!-- LinkedIn -->
+        <div class="contact-card">
+            <div class="contact-icon">in</div>
+            <h3>LinkedIn</h3>
+            <p>
+                Connect with me for professional networking
+                and career opportunities.
+            </p>
+            <a href="https://www.linkedin.com/in/yap-jun-hang-873776410/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-link">
+                Visit LinkedIn ↗
+            </a>
+        </div>
+
+
+        <!-- Facebook -->
+        <div class="contact-card">
+            <div class="contact-icon">f</div>
+            <h3>Facebook</h3>
+            <p>
+                Connect with me and stay updated
+                through my Facebook profile.
+            </p>
+            <a href="https://www.facebook.com/yapjunhang7709"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-link">
+                Visit Facebook ↗
+            </a>
+        </div>
+
+
+        <!-- Instagram -->
+        <div class="contact-card">
+            <div class="contact-icon">I</div>
+            <h3>Instagram</h3>
+            <p>
+                Follow my Instagram profile
+                to see my personal updates and activities.
+            </p>
+            <a href="https://www.instagram.com/junhang0110/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-link">
+                Visit Instagram ↗
+            </a>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="contact-card">
+            <div class="contact-icon">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+
+            <h3>Phone Number</h3>
+
+            <p>
+                Feel free to contact me directly
+                for enquiries or communication.
+            </p>
+
+            <p class="phone-number" id="phoneNumber">
+                +60 16-898 7709
+            </p>
+
+            <div class="email-actions">
+
+                <a href="tel:+60168987709" class="contact-link">
+                    Call Me ↗
+                </a>
+
+                <button type="button"
+                        class="copy-email-button"
+                        onclick="copyPhone()">
+
+                    <i class="fa-solid fa-copy"></i>
+                    <span id="phoneCopyText">Copy Number</span>
+
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</section>
+
+<!-- Resume Section -->
+<div class="resume-section">
+
+    <p class="contact-label">MY RESUME</p>
+
+    <h2>Interested in My Background?</h2>
+
+    <p>
+        Explore my resume to learn more about my education,
+        technical skills, projects and work experience.
+    </p>
+
+    <a href="view-resume.html"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="view-certificate">
+
+        <i class="fa-solid fa-file-pdf"></i>
+        View My Resume
+        <span>↗</span>
+
+    </a>
+
+</div>
+
+<!-- Contact Form -->
+<section class="contact-section">
+
+    <h2>Send Me a <span>Message</span></h2>
+
+    <p class="contact-description">
+        Have a question or an opportunity to discuss?
+        Leave me a message below.
+    </p>
+
+    <div class="contact-form-container">
+
+        <form class="contact-form"
+              action="mailto:YOUR_EMAIL@example.com"
+              method="post"
+              enctype="text/plain">
+
+            <div class="form-group">
+
+                <label for="name">Your Name</label>
+
+                <input type="text"
+                       id="name"
+                       name="Name"
+                       placeholder="Enter your name"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">Your Email</label>
+
+                <input type="email"
+                       id="email"
+                       name="Email"
+                       placeholder="Enter your email address"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="subject">Subject</label>
+
+                <input type="text"
+                       id="subject"
+                       name="Subject"
+                       placeholder="Enter the subject"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">Your Message</label>
+
+                <textarea id="message"
+                          name="Message"
+                          rows="6"
+                          placeholder="Write your message here..."
+                          required></textarea>
+
+            </div>
+
+
+            <button type="submit" class="contact-submit">
+                Send Message <span>➤</span>
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- Closing Message -->
+<section class="contact-closing">
+
+    <div class="contact-closing-content">
+
+        <p class="welcome">THANK YOU FOR VISITING</p>
+
+        <h2>Let's Create Something <span>Meaningful</span></h2>
+
+        <p>
+            I look forward to connecting with people,
+            sharing ideas and exploring new opportunities
+            to learn and grow together.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 Jun Hang. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function copyEmail() {
+        const email = document.getElementById("emailAddress").textContent.trim();
+        const copyText = document.getElementById("copyText");
+
+        navigator.clipboard.writeText(email)
+            .then(() => {
+                copyText.innerHTML =
+                    '<i class="fa-solid fa-check"></i> Copied!';
+
+                setTimeout(() => {
+                    copyText.innerHTML =
+                        '<i class="fa-solid fa-copy"></i> Copy Email';
+                }, 2000);
+            })
+            .catch(() => {
+                copyText.textContent = "Copy Failed";
+            });
+    }
+
+    function copyPhone() {
+        const phone = document.getElementById("phoneNumber").textContent.trim();
+        const copyText = document.getElementById("phoneCopyText");
+
+        navigator.clipboard.writeText(phone)
+            .then(() => {
+                copyText.innerHTML =
+                    '<i class="fa-solid fa-check"></i> Copied!';
+
+                setTimeout(() => {
+                    copyText.innerHTML =
+                        '<i class="fa-solid fa-copy"></i> Copy Number';
+                }, 2000);
+            })
+            .catch(() => {
+                copyText.textContent = "Copy Failed";
+            });
+    }
+</script>
+
+</body>
+</html>

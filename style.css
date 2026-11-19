@@ -1,0 +1,2707 @@
+
+/* ========================================
+   General Settings
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ========================================
+   Navigation Bar
+======================================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 22px 6%;
+    background: #111a2e;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #26334d;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    color: #c4b5fd;
+    transform: scale(1.1) rotate(-5deg);
+    text-shadow: 0 0 15px #a78bfa;
+}
+
+.logo span,
+h1 span,
+h2 span {
+    color: #a78bfa;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+/* Navigation Links */
+nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Underline */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #a78bfa;
+    transition: width 0.3s ease;
+}
+
+/* Current Active Page */
+nav a.active {
+    color: #a78bfa;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+/* Hover Effect */
+nav:hover a.active:not(:hover) {
+    color: #cbd5e1;
+}
+
+nav:hover a.active:not(:hover)::after {
+    width: 0;
+}
+
+nav a:hover {
+    color: #a78bfa;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Navigation Icons */
+nav a i {
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+/* Icon Hover Effect */
+nav a:hover i {
+    transform: translateY(-2px);
+    color: #a78bfa;
+}
+
+/* Active Page Icon */
+nav a.active i {
+    color: #a78bfa;
+}
+
+/* ========================================
+   Hero Section
+======================================== */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 10%;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 600px;
+    animation: fadeIn 1s ease;
+}
+
+.welcome {
+    color: #a78bfa;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #94a3b8;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* ========================================
+   Buttons
+======================================== */
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: #8b5cf6;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid #8b5cf6;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #7c3aed;
+    border-color: #7c3aed;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px #8b5cf644;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #8b5cf6;
+}
+
+.btn-outline:hover {
+    background: #8b5cf6;
+}
+
+/* ========================================
+   Profile Circle
+======================================== */
+
+.profile-circle {
+    width: 250px;
+    height: 250px;
+    min-width: 250px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #312e81);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    font-weight: bold;
+    box-shadow: 0 0 50px #8b5cf655;
+    transition: all 0.4s ease;
+}
+
+.profile-circle:hover {
+    transform: scale(1.08) rotate(5deg);
+    box-shadow: 0 0 65px #8b5cf677;
+}
+
+/* ========================================
+   General Sections
+======================================== */
+
+.section {
+    padding: 65px 10%;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+/* ========================================
+   About Card
+======================================== */
+
+.about-card {
+    background: #151f35;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #26334d;
+    line-height: 1.8;
+    transition: all 0.3s ease;
+}
+
+.about-card:hover {
+    border-color: #8b5cf6;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #8b5cf622;
+}
+
+.about-card p {
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+
+/* ========================================
+   Work Experience Spacing
+======================================== */
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ========================================
+   Education Cards
+======================================== */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #151f35;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #26334d;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #a78bfa;
+    box-shadow: 0 10px 25px #8b5cf622;
+}
+
+.card h3 {
+    color: #a78bfa;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #94a3b8;
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   Skills
+======================================== */
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill p {
+    margin-bottom: 10px;
+    color: #cbd5e1;
+}
+
+.skill-bar {
+    height: 10px;
+    background: #26334d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, #8b5cf6, #c084fc);
+    border-radius: 10px;
+    animation: grow 1.5s ease;
+}
+
+.html {
+    width: 75%;
+}
+
+.css {
+    width: 65%;
+}
+
+.java {
+    width: 80%;
+}
+
+.database {
+    width: 70%;
+}
+
+/* ========================================
+   Footer
+======================================== */
+
+footer {
+    background: #111a2e;
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+    font-size: 14px;
+    border-top: 1px solid #26334d;
+}
+
+/* ========================================
+   Animations
+======================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes grow {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--skill-width, 100%);
+    }
+}
+
+/* ========================================
+   Hobbies Hero Section
+======================================== */
+
+.hobbies-hero {
+    text-align: center;
+    padding: 80px 10% 40px;
+    animation: fadeIn 1s ease;
+}
+
+.hobbies-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hobbies-hero h1 span {
+    color: #a78bfa;
+}
+
+.hobbies-hero p:last-child {
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   Responsive Design - Tablet
+======================================== */
+
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    nav {
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 60px 7%;
+    }
+
+    .section {
+        padding: 55px 7%;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========================================
+   Responsive Design - Mobile
+======================================== */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 5%;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    /* Hero */
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .profile-circle {
+        width: 180px;
+        height: 180px;
+        min-width: 180px;
+        font-size: 55px;
+    }
+
+    /* General Sections */
+
+    .section {
+        padding: 50px 7%;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    /* Cards */
+
+    .card-container,
+    .hobby-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hobbies-hero h1 {
+        font-size: 36px;
+    }
+}
+
+/* ========================================
+   Responsive Design - Small Mobile
+======================================== */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 45px 6%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .welcome {
+        font-size: 11px;
+    }
+
+    .btn {
+        padding: 11px 18px;
+        font-size: 13px;
+    }
+
+    .profile-circle {
+        width: 160px;
+        height: 160px;
+        min-width: 160px;
+        font-size: 48px;
+    }
+
+    .section h2 {
+        font-size: 25px;
+    }
+
+    .about-card,
+    .card,
+    .hobby-card {
+        padding: 22px;
+    }
+
+    .hobbies-hero h1 {
+        font-size: 30px;
+    }
+}
+
+
+/* ========================================
+   About Page
+======================================== */
+
+/* About Hero */
+
+.about-hero {
+    text-align: center;
+    padding: 80px 10% 40px;
+    animation: fadeIn 1s ease;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.about-hero h1 span {
+    color: #a78bfa;
+}
+
+.about-hero p:last-child {
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+/* About Introduction */
+
+.about-intro-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: #151f35;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #26334d;
+    transition: 0.3s ease;
+}
+
+.about-intro-container:hover {
+    border-color: #8b5cf6;
+    box-shadow: 0 10px 25px #8b5cf622;
+}
+
+.about-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-profile-circle {
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #312e81);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    box-shadow: 0 0 40px #8b5cf655;
+    transition: 0.4s ease;
+}
+
+.about-profile-circle:hover {
+    transform: scale(1.08) rotate(5deg);
+}
+
+.about-intro-text h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.about-intro-text h2 span {
+    color: #a78bfa;
+}
+
+.about-intro-text h3 {
+    color: #cbd5e1;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.about-intro-text p {
+    color: #94a3b8;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+/* About Page Responsive */
+
+@media (max-width: 768px) {
+
+    .about-hero {
+        padding: 60px 7% 30px;
+    }
+
+    .about-hero h1 {
+        font-size: 36px;
+    }
+
+    .about-intro-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .about-profile-circle {
+        width: 170px;
+        height: 170px;
+        min-width: 170px;
+        font-size: 50px;
+    }
+
+    .about-intro-text h2 {
+        font-size: 25px;
+    }
+}
+
+
+/* ========================================
+   Skills Page
+======================================== */
+
+/* Skills Hero */
+
+.skills-hero {
+    text-align: center;
+    padding: 80px 10% 40px;
+    animation: fadeIn 1s ease;
+}
+
+.skills-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.skills-hero h1 span {
+    color: #a78bfa;
+}
+
+.skills-hero p:last-child {
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+/* Technical Skills */
+
+.skills-container {
+    max-width: 750px;
+    margin: auto;
+    background: #151f35;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #26334d;
+}
+
+.skill {
+    margin-bottom: 28px;
+}
+
+.skill:last-child {
+    margin-bottom: 0;
+}
+
+.skill p {
+    font-weight: bold;
+}
+
+/* Technical Skills Progress Bars */
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background: #26334d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    border-radius: 10px;
+    width: 0;
+    animation: grow 2s ease forwards;
+}
+
+/* Individual Skill Percentages */
+
+.html {
+    --skill-width: 75%;
+}
+
+.css {
+    --skill-width: 65%;
+}
+
+.java {
+    --skill-width: 80%;
+}
+
+.database {
+    --skill-width: 70%;
+}
+
+/* Progress Bar Animation */
+
+@keyframes grow {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--skill-width);
+    }
+}
+
+
+/* Tools and Technologies */
+
+.tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tool-item {
+    display: inline-block;
+    background: #151f35;
+    color: #c4b5fd;
+    padding: 13px 22px;
+    border: 1px solid #26334d;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.tool-item:hover {
+    background: #8b5cf6;
+    color: #ffffff;
+    border-color: #a78bfa;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #8b5cf622;
+}
+
+/* Skills Page Responsive */
+
+@media (max-width: 768px) {
+
+    .skills-hero {
+        padding: 60px 7% 30px;
+    }
+
+    .skills-hero h1 {
+        font-size: 36px;
+    }
+
+    .skills-container {
+        padding: 25px 20px;
+    }
+
+    .tools-container {
+        gap: 10px;
+    }
+
+    .tool-item {
+        padding: 11px 16px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .skills-hero h1 {
+        font-size: 30px;
+    }
+
+    .skills-container {
+        padding: 20px 15px;
+    }
+}
+
+
+/* ========================================
+   Experience Page
+======================================== */
+
+/* Experience Hero */
+
+.experience-hero {
+    text-align: center;
+    padding: 80px 10% 40px;
+    animation: fadeIn 1s ease;
+}
+
+.experience-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.experience-hero h1 span {
+    color: #a78bfa;
+}
+
+.experience-hero p:last-child {
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+/* Work Experience */
+
+.experience-list {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.experience-card {
+    display: flex;
+    gap: 25px;
+    background: #151f35;
+    padding: 30px;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+    box-shadow: 0 10px 25px #8b5cf622;
+}
+
+.experience-icon {
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #8b5cf6;
+    color: #ffffff;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.experience-content {
+    flex: 1;
+}
+
+.experience-type {
+    color: #a78bfa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.experience-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.experience-description {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.experience-content ul {
+    padding-left: 20px;
+    color: #cbd5e1;
+    line-height: 1.9;
+}
+
+.experience-content li {
+    margin-bottom: 5px;
+}
+
+/* Experience Tags */
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.experience-tags span {
+    background: #26334d;
+    color: #c4b5fd;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Education Timeline */
+
+.education-timeline {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    padding-left: 35px;
+}
+
+.education-timeline::before {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: #8b5cf6;
+}
+
+.education-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+.education-dot {
+    position: absolute;
+    left: -32px;
+    top: 25px;
+    width: 14px;
+    height: 14px;
+    background: #a78bfa;
+    border: 3px solid #0b1120;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.education-card {
+    background: #151f35;
+    padding: 25px;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateX(5px);
+    border-color: #8b5cf6;
+}
+
+.education-status {
+    color: #a78bfa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.education-card h3 {
+    margin-bottom: 10px;
+}
+
+.education-card p:last-child {
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+/* Skills Gained */
+
+.experience-skills {
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.experience-skill {
+    background: #151f35;
+    color: #c4b5fd;
+    padding: 13px 22px;
+    border: 1px solid #26334d;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.experience-skill:hover {
+    background: #8b5cf6;
+    color: #ffffff;
+    border-color: #a78bfa;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #8b5cf622;
+}
+
+/* Experience Page Responsive */
+
+@media (max-width: 768px) {
+
+    .experience-hero {
+        padding: 60px 7% 30px;
+    }
+
+    .experience-hero h1 {
+        font-size: 36px;
+    }
+
+    .experience-card {
+        padding: 22px;
+        gap: 15px;
+    }
+
+    .experience-content h3 {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .experience-hero h1 {
+        font-size: 30px;
+    }
+
+    .experience-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .experience-icon {
+        min-width: 45px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .education-card {
+        padding: 20px;
+    }
+
+    .experience-skill {
+        padding: 11px 15px;
+        font-size: 13px;
+    }
+}
+
+
+/* ========================================
+   Projects Page
+======================================== */
+
+/* Projects Hero */
+
+.projects-hero {
+    text-align: center;
+    padding: 80px 10% 40px;
+    animation: fadeIn 1s ease;
+}
+
+.projects-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.projects-hero h1 span {
+    color: #a78bfa;
+}
+
+.projects-hero p:last-child {
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+/* Project Cards */
+
+.projects-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: #151f35;
+    padding: 30px;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #8b5cf6;
+    box-shadow: 0 10px 25px #8b5cf622;
+}
+
+.project-number {
+    color: #a78bfa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.project-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.project-card > p:not(.project-status) {
+    color: #94a3b8;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Project Technology Tags */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 20px;
+}
+
+.project-tags span {
+    background: #26334d;
+    color: #c4b5fd;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.project-status {
+    display: inline-block;
+    color: #a78bfa;
+    font-size: 12px;
+    font-weight: bold;
+    border-top: 1px solid #26334d;
+    padding-top: 15px;
+    width: 100%;
+}
+
+/* Development Approach */
+
+.development-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.development-card {
+    background: #151f35;
+    padding: 25px;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.development-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+}
+
+.development-card h3 {
+    color: #a78bfa;
+    margin-bottom: 12px;
+}
+
+.development-card p {
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+/* Projects Page Responsive */
+
+@media (max-width: 768px) {
+
+    .projects-hero {
+        padding: 60px 7% 30px;
+    }
+
+    .projects-hero h1 {
+        font-size: 36px;
+    }
+
+    .projects-container,
+    .development-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .projects-hero h1 {
+        font-size: 30px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 19px;
+    }
+}
+
+
+/* ========================================
+   Research Page
+======================================== */
+
+/* Research Hero */
+
+.research-hero {
+    text-align: center;
+    padding: 80px 10% 40px;
+    animation: fadeIn 1s ease;
+}
+
+.research-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.research-hero h1 span {
+    color: #a78bfa;
+}
+
+.research-hero p:last-child {
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+/* Research Interests */
+
+.research-interest-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.research-interest-card {
+    background: #151f35;
+    padding: 25px;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.research-interest-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+}
+
+.research-interest-card h3 {
+    color: #c4b5fd;
+    margin-bottom: 12px;
+}
+
+.research-interest-card p {
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+/* Featured Research */
+
+.research-feature-card {
+    max-width: 900px;
+    margin: auto;
+    background: #151f35;
+    padding: 35px;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.research-feature-card:hover {
+    border-color: #8b5cf6;
+    box-shadow: 0 10px 25px #8b5cf622;
+}
+
+.research-label {
+    display: inline-block;
+    color: #a78bfa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.research-feature-card h3 {
+    font-size: 23px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.research-description {
+    color: #94a3b8;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Research Subsections */
+
+.research-subsection {
+    margin-top: 25px;
+}
+
+.research-subsection h4 {
+    color: #c4b5fd;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.research-subsection ul {
+    padding-left: 22px;
+    color: #cbd5e1;
+    line-height: 1.9;
+}
+
+.research-subsection p {
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+/* Research Tags */
+
+.research-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.research-tags span {
+    background: #26334d;
+    color: #c4b5fd;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Research Status */
+
+.research-status {
+    border-top: 1px solid #26334d;
+    padding-top: 18px;
+    margin-top: 25px;
+    color: #a78bfa;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Research Skills */
+
+.research-skills-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.research-skill-card {
+    background: #151f35;
+    padding: 25px;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.research-skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+}
+
+.research-skill-card h3 {
+    color: #c4b5fd;
+    margin-bottom: 12px;
+}
+
+.research-skill-card p {
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+/* Research Page Responsive */
+
+@media (max-width: 768px) {
+
+    .research-hero {
+        padding: 60px 7% 30px;
+    }
+
+    .research-hero h1 {
+        font-size: 36px;
+    }
+
+    .research-interest-container {
+        grid-template-columns: 1fr;
+    }
+
+    .research-feature-card {
+        padding: 25px;
+    }
+
+    .research-skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .research-hero h1 {
+        font-size: 30px;
+    }
+
+    .research-feature-card {
+        padding: 20px;
+    }
+
+    .research-feature-card h3 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+/* ========================================
+   Certifications & Achievements Page
+======================================== */
+
+
+/* Certifications Hero */
+
+.certifications-hero {
+    text-align: center;
+    padding: 80px 10% 40px;
+    animation: fadeIn 1s ease;
+}
+
+.certifications-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.certifications-hero h1 span {
+    color: #a78bfa;
+}
+
+.certifications-hero p:last-child {
+    color: #94a3b8;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: auto;
+}
+
+
+/* General Certification Sections */
+
+.certification-section {
+    padding: 40px 10%;
+    text-align: center;
+}
+
+.certification-section h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.certification-section h2 span {
+    color: #a78bfa;
+}
+
+.certification-description {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* Academic Qualifications */
+
+.qualification-container {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.qualification-card {
+    background: #151f35;
+    padding: 30px 25px;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.qualification-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+    box-shadow: 0 8px 20px #8b5cf622;
+}
+
+.certification-icon {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.qualification-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.institution {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.result-highlight {
+    color: #a78bfa;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.result-label {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+
+/* Academic Achievements */
+
+.dean-container {
+    max-width: 950px;
+    margin: auto;
+}
+
+.dean-card {
+    background: #151f35;
+    padding: 35px;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.dean-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+    box-shadow: 0 8px 20px #8b5cf622;
+}
+
+.dean-card h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.dean-description {
+    max-width: 650px;
+    margin: auto;
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+.semester-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.semester-list span {
+    background: #0b1120;
+    color: #a78bfa;
+    padding: 12px 20px;
+    border: 1px solid #26334d;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.semester-list span:hover {
+    border-color: #8b5cf6;
+    transform: translateY(-3px);
+}
+
+.achievement-summary {
+    margin-top: 25px;
+    color: #c4b5fd;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Technical and Online Certificates */
+
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.certificate-card {
+    background: #151f35;
+    padding: 28px 22px;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+    box-shadow: 0 8px 20px #8b5cf622;
+}
+
+.certificate-card h3 {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.certificate-card p {
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 70px;
+}
+
+.certificate-category {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 7px 16px;
+    background: #0b1120;
+    color: #a78bfa;
+    border: 1px solid #26334d;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* View Certificate Link */
+
+.certificate-action {
+    margin-top: 22px;
+}
+
+.view-certificate {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 20px;
+    background: #8b5cf6;
+    color: #ffffff;
+    border: 1px solid #8b5cf6;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.view-certificate:hover {
+    background: #7c3aed;
+    border-color: #a78bfa;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px #8b5cf644;
+}
+
+.view-certificate span {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.view-certificate:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+
+    .certificates-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .certifications-hero {
+        padding: 60px 7% 30px;
+    }
+
+    .certifications-hero h1 {
+        font-size: 36px;
+    }
+
+    .certification-section {
+        padding: 35px 7%;
+    }
+
+    .qualification-container {
+        grid-template-columns: 1fr;
+    }
+
+    .certificates-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dean-card {
+        padding: 25px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .certifications-hero h1 {
+        font-size: 30px;
+    }
+
+    .certification-section h2 {
+        font-size: 25px;
+    }
+
+    .certificates-container {
+        grid-template-columns: 1fr;
+    }
+
+    .dean-card {
+        padding: 20px;
+    }
+
+    .semester-list {
+        flex-direction: column;
+    }
+
+    .semester-list span {
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+/* ========================================
+   Hobbies & Interests Page
+======================================== */
+
+
+/* Hobbies Hero */
+
+.hobbies-hero {
+    text-align: center;
+    padding: 85px 10% 55px;
+    animation: fadeIn 1s ease;
+}
+
+.hobbies-hero h1 {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.hobbies-hero h1 span {
+    color: #a78bfa;
+}
+
+.hobbies-hero p:last-of-type {
+    color: #94a3b8;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
+}
+
+.hobbies-hero-line {
+    width: 55px;
+    height: 3px;
+    background: #8b5cf6;
+    border-radius: 5px;
+    margin: 28px auto 15px;
+}
+
+.hobbies-subtitle {
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+/* Section Heading */
+
+.hobbies-section {
+    padding: 45px 10% 65px;
+    text-align: center;
+}
+
+.hobbies-section-heading {
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.hobbies-label {
+    color: #a78bfa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hobbies-label:hover {
+    color: #c4b5fd;
+    text-shadow: 0 0 10px #a78bfa66;
+}
+
+.hobbies-section h2,
+.hobbies-message h2,
+.lifestyle-text h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.hobbies-section h2 span,
+.hobbies-message h2 span,
+.lifestyle-text h2 span {
+    color: #a78bfa;
+}
+
+.hobbies-description {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* Hobbies Cards */
+
+.hobbies-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    max-width: 950px;
+    margin: auto;
+    text-align: left;
+}
+
+.hobby-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #151f35;
+    padding: 30px;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    min-height: 290px;
+    transition: all 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-7px);
+    border-color: #8b5cf6;
+    box-shadow: 0 10px 25px #8b5cf622;
+}
+
+.hobby-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.hobby-number {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hobby-category {
+    color: #a78bfa;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+.hobby-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 58px;
+    background: #8b5cf620;
+    border: 1px solid #8b5cf640;
+    border-radius: 12px;
+    font-size: 28px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.hobby-card:hover .hobby-icon {
+    background: #8b5cf6;
+    transform: scale(1.08);
+}
+
+.hobby-card h3 {
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.hobby-card:hover h3 {
+    color: #c4b5fd;
+}
+
+.hobby-card p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    transition: color 0.3s ease;
+}
+
+.hobby-card:hover p {
+    color: #cbd5e1;
+}
+
+.hobby-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #26334d;
+    padding-top: 15px;
+    margin-top: auto;
+    color: #a78bfa;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hobby-arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.hobby-card:hover .hobby-arrow {
+    transform: translate(3px, -3px);
+}
+
+
+/* Lifestyle Section */
+
+.hobbies-lifestyle {
+    padding: 45px 10% 65px;
+}
+
+.lifestyle-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 50px;
+    max-width: 950px;
+    margin: auto;
+    padding: 45px;
+    background: #111a2e;
+    border: 1px solid #26334d;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Lifestyle Box Hover */
+
+.lifestyle-content:hover {
+    transform: translateY(-7px);
+    border-color: #8b5cf6;
+    box-shadow: 0 10px 25px #8b5cf622;
+}
+
+.lifestyle-text h2 {
+    line-height: 1.4;
+}
+
+.lifestyle-text p:last-child {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* Lifestyle Points */
+
+.lifestyle-points {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lifestyle-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 12px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.lifestyle-point:hover {
+    transform: translateY(-5px);
+    background: #151f35;
+    border-color: #8b5cf6;
+    box-shadow: 0 5px 15px #8b5cf622;
+}
+
+.lifestyle-point-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 35px;
+    height: 35px;
+    background: #8b5cf620;
+    color: #a78bfa;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.lifestyle-point:hover .lifestyle-point-icon {
+    background: #8b5cf6;
+    color: #ffffff;
+    box-shadow: 0 0 15px #8b5cf666;
+}
+
+.lifestyle-point h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.lifestyle-point:hover h3 {
+    color: #a78bfa;
+}
+
+.lifestyle-point p {
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.lifestyle-point:hover p {
+    color: #cbd5e1;
+}
+
+
+/* Personal Development */
+
+.hobbies-development {
+    padding: 20px 10% 75px;
+    text-align: center;
+}
+
+.hobbies-message {
+    max-width: 850px;
+    margin: auto;
+    padding: 45px 40px;
+    background: #151f35;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.hobbies-message:hover {
+    transform: translateY(-7px);
+    border-color: #8b5cf6;
+    box-shadow: 0 8px 20px #8b5cf622;
+}
+
+.hobbies-message h2 {
+    margin-bottom: 18px;
+}
+
+.hobbies-message p:last-child {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .hobbies-hero {
+        padding: 60px 7% 40px;
+    }
+
+    .hobbies-hero h1 {
+        font-size: 36px;
+    }
+
+    .hobbies-section {
+        padding: 35px 7% 50px;
+    }
+
+    .hobbies-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .hobby-card {
+        min-height: auto;
+    }
+
+    .hobbies-lifestyle {
+        padding: 30px 7% 50px;
+    }
+
+    .lifestyle-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 30px;
+    }
+
+    .hobbies-development {
+        padding: 15px 7% 55px;
+    }
+
+    .hobbies-message {
+        padding: 35px 25px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .hobbies-hero h1 {
+        font-size: 30px;
+    }
+
+    .hobbies-section h2,
+    .hobbies-message h2,
+    .lifestyle-text h2 {
+        font-size: 25px;
+    }
+
+    .hobby-card {
+        padding: 25px 22px;
+    }
+
+    .lifestyle-content {
+        padding: 25px 20px;
+    }
+
+    .hobbies-message {
+        padding: 28px 20px;
+    }
+
+}
+
+
+/* ========================================
+   Contact Page
+======================================== */
+
+
+/* Contact Hero */
+
+.contact-hero {
+    text-align: center;
+    padding: 85px 10% 45px;
+    animation: fadeIn 1s ease;
+}
+
+.contact-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.contact-hero h1 span {
+    color: #a78bfa;
+}
+
+.contact-hero p:last-child {
+    color: #94a3b8;
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+
+/* Contact Sections */
+
+.contact-section {
+    padding: 40px 10% 55px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.contact-section h2 span {
+    color: #a78bfa;
+}
+
+.contact-description {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* Contact Information Cards */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.contact-card {
+    background: #151f35;
+    padding: 30px 22px;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-7px);
+    border-color: #8b5cf6;
+    box-shadow: 0 8px 20px #8b5cf622;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+    background: #8b5cf622;
+    color: #a78bfa;
+    border: 1px solid #8b5cf644;
+    border-radius: 12px;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    background: #8b5cf6;
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+.contact-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 70px;
+    margin-bottom: 18px;
+}
+
+.contact-link {
+    display: inline-block;
+    color: #a78bfa;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Email Address */
+.email-address {
+    color: #c4b5fd !important;
+    font-size: 14px !important;
+    font-weight: bold;
+    min-height: auto !important;
+    margin-bottom: 15px !important;
+    word-break: break-word;
+}
+
+/* Email Actions */
+.email-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Copy Email Button */
+.copy-email-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: transparent;
+    color: #a78bfa;
+    border: 1px solid #8b5cf6;
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-email-button:hover {
+    background: #8b5cf6;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Phone Number */
+.phone-number {
+    color: #c4b5fd !important;
+    font-size: 14px !important;
+    font-weight: bold;
+    min-height: auto !important;
+    margin-bottom: 15px !important;
+}
+
+/* Contact Form Container */
+
+.contact-form-container {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+    background: #151f35;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.contact-form-container:hover {
+    border-color: #8b5cf6;
+    box-shadow: 0 8px 20px #8b5cf622;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    color: #e2e8f0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    background: #0b1120;
+    color: #ffffff;
+    border: 1px solid #26334d;
+    border-radius: 8px;
+    outline: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input {
+    height: 45px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.6;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #64748b;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px #8b5cf622;
+}
+
+/* Resume Section */
+.resume-section {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 45px 10%;
+}
+
+.resume-section h2 {
+    margin-bottom: 15px;
+}
+
+.resume-section p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Send Message Button */
+
+.contact-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    align-self: flex-start;
+    padding: 13px 25px;
+    background: #8b5cf6;
+    color: #ffffff;
+    border: 1px solid #8b5cf6;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-submit:hover {
+    background: #7c3aed;
+    border-color: #a78bfa;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px #8b5cf644;
+}
+
+.contact-submit span {
+    transition: transform 0.3s ease;
+}
+
+.contact-submit:hover span {
+    transform: translateX(4px);
+}
+
+
+/* Closing Message */
+
+.contact-closing {
+    padding: 25px 10% 75px;
+    text-align: center;
+}
+
+.contact-closing-content {
+    max-width: 850px;
+    margin: auto;
+    padding: 45px 35px;
+    background: #111a2e;
+    border: 1px solid #26334d;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.contact-closing-content:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+    box-shadow: 0 8px 20px #8b5cf622;
+}
+
+.contact-closing-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact-closing-content h2 span {
+    color: #a78bfa;
+}
+
+.contact-closing-content p:last-child {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: auto;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .contact-hero {
+        padding: 60px 7% 35px;
+    }
+
+    .contact-hero h1 {
+        font-size: 36px;
+    }
+
+    .contact-section {
+        padding: 35px 7%;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .contact-form-container {
+        padding: 25px;
+    }
+
+    .contact-closing {
+        padding: 20px 7% 55px;
+    }
+
+    .contact-closing-content {
+        padding: 35px 25px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .contact-hero h1 {
+        font-size: 30px;
+    }
+
+    .contact-section h2 {
+        font-size: 25px;
+    }
+
+    .contact-form-container {
+        padding: 20px;
+    }
+
+    .contact-submit {
+        width: 100%;
+    }
+
+    .contact-closing-content {
+        padding: 30px 20px;
+    }
+
+    .contact-closing-content h2 {
+        font-size: 24px;
+    }
+
+}
+
+
