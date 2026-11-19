@@ -241,6 +241,15 @@ nav a.active i {
     box-shadow: 0 0 65px #8b5cf677;
 }
 
+/* Profile Image */
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
 /* ========================================
    General Sections
 ======================================== */
@@ -322,6 +331,53 @@ nav a.active i {
     color: #94a3b8;
     margin-bottom: 8px;
     line-height: 1.7;
+}
+
+/* Education Icons */
+.education-card {
+    text-align: center;
+}
+
+.education-icon {
+    font-size: 45px;
+    color: #a78bfa;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.education-card:hover .education-icon {
+    transform: scale(1.15);
+}
+
+/* School Website Links */
+.education-card h3 a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.education-card h3 a:hover {
+    color: #a78bfa;
+}
+
+.school-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #a78bfa;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.school-link:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.school-link i {
+    margin-left: 5px;
+    font-size: 12px;
 }
 
 /* ========================================
@@ -667,7 +723,17 @@ footer {
 }
 
 .about-profile-circle:hover {
-    transform: scale(1.08) rotate(5deg);
+    transform: scale(1.08) rotate(-5deg);
+}
+
+/* About Profile Image */
+.about-profile-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .about-intro-text h2 {
@@ -1034,15 +1100,15 @@ footer {
 
 .education-timeline {
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
-    padding-left: 35px;
+    padding-left: 125px;
 }
 
 .education-timeline::before {
     content: "";
     position: absolute;
-    left: 9px;
+    left: 39px;
     top: 10px;
     bottom: 10px;
     width: 2px;
@@ -1060,14 +1126,35 @@ footer {
 
 .education-dot {
     position: absolute;
-    left: -32px;
-    top: 25px;
-    width: 14px;
-    height: 14px;
-    background: #a78bfa;
-    border: 3px solid #0b1120;
+    left: -136px;
+    top: 5px;
+
+    width: 100px;
+    height: 100px;
+
+    background: #ffffff;
+    border: 3px solid #a78bfa;
     border-radius: 50%;
-    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2;
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+}
+
+.education-dot img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.education-dot:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #8b5cf655;
 }
 
 .education-card {
@@ -1149,6 +1236,20 @@ footer {
 
     .experience-content h3 {
         font-size: 19px;
+    }
+
+    .education-timeline {
+        padding-left: 100px;
+    }
+
+    .education-timeline::before {
+        left: 32px;
+    }
+
+    .education-dot {
+        width: 76px;
+        height: 76px;
+        left: -104px;
     }
 }
 
