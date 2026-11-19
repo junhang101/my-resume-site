@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 
 /* ========================================
    General Settings
@@ -69,10 +70,10 @@ nav a {
     display: inline-flex;
     align-items: center;
     gap: 7px;
-
+    font-family: 'Outfit', sans-serif;
     color: #cbd5e1;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     position: relative;
     padding: 5px 0;
     transition: color 0.3s ease;
@@ -804,6 +805,34 @@ footer {
 
 .database {
     --skill-width: 70%;
+}
+
+.typescript {
+    --skill-width: 65%;
+}
+
+.python {
+    --skill-width: 50%;
+}
+
+.postgresql {
+    --skill-width: 70%;
+}
+
+.springboot {
+    --skill-width: 65%;
+}
+
+.git {
+    --skill-width: 70%;
+}
+
+.docker {
+    --skill-width: 65%;
+}
+
+.restapi {
+    --skill-width: 65%;
 }
 
 /* Progress Bar Animation */
