@@ -60,7 +60,7 @@
 
 
 <!-- Contact Hero -->
-<section class="contact-hero">
+<section class="contact-hero reveal">
 
     <p class="welcome">LET'S CONNECT</p>
 
@@ -76,7 +76,7 @@
 
 
 <!-- Contact Information -->
-<section class="contact-section">
+<section class="contact-section reveal">
 
     <h2>Contact <span>Information</span></h2>
 
@@ -240,7 +240,7 @@
 </section>
 
 <!-- Resume Section -->
-<div class="resume-section">
+<div class="resume-section reveal">
 
     <p class="contact-label">MY RESUME</p>
 
@@ -267,7 +267,7 @@
 </div>
 
 <!-- Contact Form -->
-<section class="contact-section">
+<section class="contact-section reveal">
 
     <h2>Send Me a <span>Message</span></h2>
 
@@ -350,7 +350,7 @@
 
 
 <!-- Closing Message -->
-<section class="contact-closing">
+<section class="contact-closing reveal">
 
     <div class="contact-closing-content">
 
@@ -368,6 +368,10 @@
 
 </section>
 
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
 
 <!-- Footer -->
 <footer>
@@ -412,6 +416,40 @@
                 copyText.textContent = "Copy Failed";
             });
     }
+
+    // Scroll Reveal Animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    document.querySelectorAll('.reveal').forEach(element => {
+        observer.observe(element);
+    });
+
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.style.display = 'flex';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 </script>
 
 </body>

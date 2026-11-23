@@ -59,7 +59,7 @@
 </header>
 
 <!-- Projects Hero -->
-<section class="projects-hero">
+<section class="projects-hero reveal">
     <p class="welcome">WHAT I HAVE BUILT</p>
 
     <h1>My <span>Projects</span></h1>
@@ -71,7 +71,7 @@
 </section>
 
 <!-- Featured Projects -->
-<section class="section">
+<section class="section reveal">
     <h2>Featured <span>Projects</span></h2>
 
     <div class="projects-container">
@@ -191,7 +191,7 @@
 </section>
 
 <!-- Development Approach -->
-<section class="section">
+<section class="section reveal">
     <h2>My Development <span>Approach</span></h2>
 
     <div class="development-container">
@@ -231,10 +231,51 @@
     </div>
 </section>
 
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
 <!-- Footer -->
 <footer>
     <p>&copy; 2026 Jun Hang. All Rights Reserved.</p>
 </footer>
+
+<script>
+    // Scroll Reveal Animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    document.querySelectorAll('.reveal').forEach(element => {
+        observer.observe(element);
+    });
+
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.style.display = 'flex';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
 
 </body>
 </html>

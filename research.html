@@ -59,7 +59,7 @@
 </header>
 
 <!-- Research Hero -->
-<section class="research-hero">
+<section class="research-hero reveal">
     <p class="welcome">EXPLORING KNOWLEDGE</p>
 
     <h1>My <span>Research</span></h1>
@@ -71,7 +71,7 @@
 </section>
 
 <!-- Research Interests -->
-<section class="section">
+<section class="section reveal">
     <h2>Research <span>Interests</span></h2>
 
     <div class="research-interest-container">
@@ -104,7 +104,7 @@
 </section>
 
 <!-- Final Year Project -->
-<section class="section">
+<section class="section reveal">
     <h2>Final Year <span>Project</span></h2>
 
     <div class="research-feature-card">
@@ -166,7 +166,7 @@
 </section>
 
 <!-- Literature Review -->
-<section class="section">
+<section class="section reveal">
     <h2>Other Research <span>Work</span></h2>
 
     <div class="research-feature-card">
@@ -213,7 +213,7 @@
 </section>
 
 <!-- Research Skills -->
-<section class="section">
+<section class="section reveal">
     <h2>Research <span>Skills</span></h2>
 
     <div class="research-skills-container">
@@ -241,10 +241,51 @@
     </div>
 </section>
 
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
 <!-- Footer -->
 <footer>
     <p>&copy; 2026 Jun Hang. All Rights Reserved.</p>
 </footer>
+
+<script>
+    // Scroll Reveal Animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    document.querySelectorAll('.reveal').forEach(element => {
+        observer.observe(element);
+    });
+
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.style.display = 'flex';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
 
 </body>
 </html>

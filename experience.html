@@ -59,7 +59,7 @@
 </header>
 
 <!-- Experience Hero -->
-<section class="experience-hero">
+<section class="experience-hero reveal">
     <p class="welcome">MY JOURNEY SO FAR</p>
 
     <h1>My <span>Experience</span></h1>
@@ -71,7 +71,7 @@
 </section>
 
 <!-- Work Experience -->
-<section class="section">
+<section class="section reveal">
     <h2>Work <span>Experience</span></h2>
 
     <div class="experience-list">
@@ -141,7 +141,7 @@
 </section>
 
 <!-- Education -->
-<section class="section">
+<section class="section reveal">
     <h2>Educational <span>Journey</span></h2>
 
     <div class="education-timeline">
@@ -207,7 +207,7 @@
 </section>
 
 <!-- Skills Gained -->
-<section class="section">
+<section class="section reveal">
     <h2>Skills Gained Through <span>Experience</span></h2>
 
     <div class="experience-skills">
@@ -226,11 +226,51 @@
     </div>
 </section>
 
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
 
 <!-- Footer -->
 <footer>
     <p>&copy; 2026 Jun Hang. All Rights Reserved.</p>
 </footer>
+
+<script>
+    // Scroll Reveal Animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    document.querySelectorAll('.reveal').forEach(element => {
+        observer.observe(element);
+    });
+
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.style.display = 'flex';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
 
 </body>
 </html>
